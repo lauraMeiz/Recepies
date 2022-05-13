@@ -30,18 +30,24 @@ function Search() {
   };
 
   const getFavorite = (idMeal) => {
-    console.log(idMeal);
     const elementas = [];
     meals.forEach((m) => {
-      console.log(m.idMeal);
       if (m.idMeal === idMeal) {
         elementas.push(m);
       }
     });
-    console.log(elementas);
+    // console.log(elementas.idMeal);
 
-    setFavoriteList((favoriteList) => [...favoriteList, ...elementas]);
+    for (let i = 0; i < elementas.length; i++) {
+      console.log(parseInt(elementas[i].idMeal));
+    }
+
     localStorage.setItem("favoriteList", JSON.stringify(elementas));
+    console.log(elementas);
+    if (!elementas) {
+      setFavoriteList((favoriteList) => [...favoriteList, ...elementas]);
+    }
+    //setFavoriteList((favoriteList) => [...favoriteList, ...elementas]);
   };
 
   const showChoice = () => {
