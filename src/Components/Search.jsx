@@ -35,11 +35,13 @@ function Search() {
       if (m.idMeal === idMeal) {
         elementas.push(m);
       }
-      const all = [...JSON.parse(favoriteList), ...elementas];
+      const filter = JSON.parse(favoriteList).filter(
+        (f) => f.idMeal !== idMeal
+      );
+      const all = [...filter, ...elementas];
       setFavoriteList((favoriteList) => [...favoriteList, ...all]);
 
       localStorage.setItem("favoriteList", JSON.stringify(all));
-      console.log(elementas);
     });
     // console.log(elementas.idMeal);
 
