@@ -22,7 +22,7 @@ body {
 }
 .choices {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -98,6 +98,14 @@ td {
   border: 1px solid rgb(210, 18, 40);
   list-style: none;
   border-color: transparent;
+  @media (max-width: 700px) {
+    width: 500px;
+    margin: 0 calc(50% - 250px);
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+    margin: 0 calc(50% - 150px);
+  }
 }
 // table {
 //   border-collapse: collapse;
@@ -111,6 +119,14 @@ li {
   list-style: none;
   font-weight: lighter;
   font-size: 13px;
+  @media (max-width: 700px) {
+    width: 500px;
+    margin: 0 calc(50% - 250px);
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+    margin: 0 calc(50% - 150px);
+  }
 }
 // table {
 //   width: 600px;
