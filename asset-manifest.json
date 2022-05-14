@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Recepies-Search/static/css/main.d1cbfe1c.css",
-    "main.js": "/Recepies-Search/static/js/main.3f8c001a.js",
-    "static/js/787.d71544fd.chunk.js": "/Recepies-Search/static/js/787.d71544fd.chunk.js",
-    "static/media/istockphoto-1160631768-170667a.jpg": "/Recepies-Search/static/media/istockphoto-1160631768-170667a.2982dee379c2b665fe5c.jpg",
-    "index.html": "/Recepies-Search/index.html",
-    "main.d1cbfe1c.css.map": "/Recepies-Search/static/css/main.d1cbfe1c.css.map",
-    "main.3f8c001a.js.map": "/Recepies-Search/static/js/main.3f8c001a.js.map",
-    "787.d71544fd.chunk.js.map": "/Recepies-Search/static/js/787.d71544fd.chunk.js.map"
+    "main.css": "/Recepies/static/css/main.64b90f14.css",
+    "main.js": "/Recepies/static/js/main.97aad413.js",
+    "static/js/787.d71544fd.chunk.js": "/Recepies/static/js/787.d71544fd.chunk.js",
+    "static/media/istockphoto-1160631768-170667a.jpg": "/Recepies/static/media/istockphoto-1160631768-170667a.2982dee379c2b665fe5c.jpg",
+    "index.html": "/Recepies/index.html",
+    "main.64b90f14.css.map": "/Recepies/static/css/main.64b90f14.css.map",
+    "main.97aad413.js.map": "/Recepies/static/js/main.97aad413.js.map",
+    "787.d71544fd.chunk.js.map": "/Recepies/static/js/787.d71544fd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1cbfe1c.css",
-    "static/js/main.3f8c001a.js"
+    "static/css/main.64b90f14.css",
+    "static/js/main.97aad413.js"
   ]
 }
