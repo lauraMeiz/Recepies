@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Recepies-Search/static/css/main.d1cbfe1c.css",
+    "main.js": "/Recepies-Search/static/js/main.3f8c001a.js",
+    "static/js/787.d71544fd.chunk.js": "/Recepies-Search/static/js/787.d71544fd.chunk.js",
+    "static/media/istockphoto-1160631768-170667a.jpg": "/Recepies-Search/static/media/istockphoto-1160631768-170667a.2982dee379c2b665fe5c.jpg",
+    "index.html": "/Recepies-Search/index.html",
+    "main.d1cbfe1c.css.map": "/Recepies-Search/static/css/main.d1cbfe1c.css.map",
+    "main.3f8c001a.js.map": "/Recepies-Search/static/js/main.3f8c001a.js.map",
+    "787.d71544fd.chunk.js.map": "/Recepies-Search/static/js/787.d71544fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1cbfe1c.css",
+    "static/js/main.3f8c001a.js"
+  ]
+}
