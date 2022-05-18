@@ -53,13 +53,13 @@ function FavoritList({
             <td className="instruction">{dish.strInstructions}</td>
           </tr>
         </table>
-        <button onClick={() => playVideo(dish)}>Play</button>
+        {/* <button onClick={() => playVideo(dish)}>Play</button>
         {video ? (
           <div className="video">
             <iframe video={dish} src={dish.strYoutube}></iframe>
             <button onClick={cancelVideo}>Cancel</button>
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </>
   );
