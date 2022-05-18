@@ -40,7 +40,8 @@ body {
 .btn-video {
   background-color: rgb(235, 241, 235);
   border-color: rgb(154, 205, 188);
-  padding: 10px 15px;
+  padding: 15px 10px;
+  border-radius: 10px;
 }
 .video_img {
   display: flex;
@@ -204,7 +205,7 @@ li {
   margin: 30px;
   color: white;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(163, 171, 163);
 }
 .ok:hover {
@@ -235,18 +236,18 @@ a {
 
 img {
   width: 300px;
-  margin-left: calc(50% - 200px);
+  // margin-left: calc(50% - 150px);
   box-shadow: 5px 5px 5px rgb(114, 108, 108);
   margin-bottom: 30px;
   border-radius: 50%;
 
   @media (max-width: 700px) {
-    width: 300px;
-    margin: 0 calc(50% - 250px);
+    width: 200px;
+    // margin: 0 calc(50% - 250px);
   }
   @media (max-width: 500px) {
-    width: 315px;
-    margin: 0 calc(50% - 150px);
+    width: 100px;
+    // margin: 0 calc(50% - 150px);
   }
 }
 
