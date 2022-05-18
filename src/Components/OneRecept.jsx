@@ -10,6 +10,7 @@ function OneRecept({ dish, getFavorite }) {
   const playVideo = (dish) => {
     setVideo(dish);
     console.log(dish.strYoutube);
+    console.log(dish.strYoutube.split("="));
   };
   const cancelVideo = () => {
     setVideo(0);
@@ -24,10 +25,40 @@ function OneRecept({ dish, getFavorite }) {
             {dish.strArea}&{dish.strCategory}
           </span>
         </h1>
-        <div onClick={() => getFavorite(dish.idMeal)} className="ok">
-          Favorite ?{" "}
+        <div className="video_img">
+          <div onClick={() => getFavorite(dish.idMeal)} className="ok">
+            Favorite ?{" "}
+          </div>
+
+          <img src={dish.strMealThumb} alt="food" />
+          <button className="btn-video" onClick={() => playVideo(dish)}>
+            Play Video
+          </button>
         </div>
-        <img src={dish.strMealThumb} alt="food" />
+        {video ? (
+          <div className="video">
+            {/* <iframe
+              title={dish}
+              video={dish}
+              url={dish.strYoutube}
+              alt=""
+            ></iframe> */}
+            <iframe
+              width="560"
+              height="315"
+              src={`https://www.youtube.com/embed/${
+                dish.strYoutube.split("=")[1]
+              }`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <button className="btn-video" onClick={cancelVideo}>
+              Cancel
+            </button>
+          </div>
+        ) : null}
         {/* <img
           // className="ingridient-img"
           src={`https://www.themealdb.com/images/ingredients/${dish}
@@ -77,16 +108,6 @@ function OneRecept({ dish, getFavorite }) {
             <td className="instruction">{dish.strInstructions}</td>
           </tr>
         </table>{" "}
-        <button onClick={() => playVideo(dish)}>Play</button>
-        {video ? (
-          <div className="video">
-            <iframe
-              video={dish}
-              src="http://www.youtube.com/embed/xDMP3i36naA"
-            ></iframe>
-            <button onClick={cancelVideo}>Cancel</button>
-          </div>
-        ) : null}
       </div>
     </>
   );
