@@ -80,7 +80,10 @@ function OneRecept({ dish, getFavorite }) {
         <button onClick={() => playVideo(dish)}>Play</button>
         {video ? (
           <div className="video">
-            <iframe video={dish} src={dish.strYoutube}></iframe>
+            <iframe
+              video={dish}
+              src="http://www.youtube.com/embed/xDMP3i36naA"
+            ></iframe>
             <button onClick={cancelVideo}>Cancel</button>
           </div>
         ) : null}
