@@ -1,4 +1,11 @@
-function FavoritList({ favoriteList, dish, deleteHandle }) {
+function FavoritList({
+  favoriteList,
+  dish,
+  deleteHandle,
+  cancelVideo,
+  playVideo,
+  video,
+}) {
   //   const handleDelete = (idMeal) => {
   //     deleteHandle(parseInt(idMeal));
   //     console.log(idMeal);
@@ -46,6 +53,13 @@ function FavoritList({ favoriteList, dish, deleteHandle }) {
             <td className="instruction">{dish.strInstructions}</td>
           </tr>
         </table>
+        <button onClick={() => playVideo(dish)}>Play</button>
+        {video ? (
+          <div className="video">
+            <iframe video={dish} src={dish.strYoutube}></iframe>
+            <button onClick={cancelVideo}>Cancel</button>
+          </div>
+        ) : null}
       </div>
     </>
   );

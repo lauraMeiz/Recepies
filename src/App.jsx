@@ -9,6 +9,8 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
+        {/* <div className="choices"> */}
+        <h1 className="title">Recepies</h1>
         <div className="choices">
           <Link to="/favorite">Yours Favorite</Link>
           <Link to="/search">Search</Link>

@@ -1,8 +1,19 @@
+// import Iframe from "react-iframe";
+
+import { useState } from "react";
+
 function OneRecept({ dish, getFavorite }) {
+  const [video, setVideo] = useState(0);
   // Object.keys(dish).filter((f) =>
   //   // console.log(f.substring(0, 13) === "strIngredient")
   // );
-
+  const playVideo = (dish) => {
+    setVideo(dish);
+    console.log(dish.strYoutube);
+  };
+  const cancelVideo = () => {
+    setVideo(0);
+  };
   // console.log(Object.keys(dish));
   return (
     <>
@@ -16,8 +27,14 @@ function OneRecept({ dish, getFavorite }) {
         <div onClick={() => getFavorite(dish.idMeal)} className="ok">
           Favorite ?{" "}
         </div>
-
         <img src={dish.strMealThumb} alt="food" />
+        {/* <img
+          // className="ingridient-img"
+          src={`https://www.themealdb.com/images/ingredients/${dish}
+            .split(" ")
+            .join("%20")}.png`}
+          alt=""
+        /> */}
         <table>
           <tr className="title">
             <th> Ingredients</th>
@@ -26,11 +43,25 @@ function OneRecept({ dish, getFavorite }) {
             <th>Steps</th>
           </tr>
           <tr className="ingridient">
-            <th>
+            <th className="igri">
               {Object.keys(dish).map(
                 (f, i) =>
                   f.substring(0, 13) === "strIngredient" && (
-                    <li key={i}>{dish[f]}</li>
+                    // dish[f] !== "" &&
+                    // dish[f] !== null
+
+                    <li key={i}>
+                      {/* <img
+                        // className="ingridient-img"
+                        src={`https://www.themealdb.com/images/ingredients/${dish[
+                          f
+                        ]
+                          .split(" ")
+                          .join("%20")}.png`}
+                        alt=""
+                      /> */}
+                      {dish[f]}
+                    </li>
                   )
               )}
             </th>
@@ -45,7 +76,14 @@ function OneRecept({ dish, getFavorite }) {
             {/* <td>{dish.strMeasure1}</td> */}
             <td className="instruction">{dish.strInstructions}</td>
           </tr>
-        </table>
+        </table>{" "}
+        <button onClick={() => playVideo(dish)}>Play</button>
+        {video ? (
+          <div className="video">
+            <iframe video={dish} src={dish.strYoutube}></iframe>
+            <button onClick={cancelVideo}>Cancel</button>
+          </div>
+        ) : null}
       </div>
     </>
   );
